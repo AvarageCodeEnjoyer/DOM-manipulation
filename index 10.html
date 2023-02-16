@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="colors">
+    <h1 id="color">h1 tag</h1>
+  </div>
+    <script defer>
+      const colors = document.getElementsByClassName('colors')[0]
+      const h1 = document.querySelector('h1')
+      let text = document.createElement('P')
+      text.dataset.id = "color"
+      text.textContent = 'new replacement element'
+      h1.parentNode.replaceChild(text, h1)
+    </script>
+</body>
+</html>
